@@ -40,4 +40,8 @@ angular.module('myApp.dashboard', ['ngRoute'])
 
         $scope.getTimeLine();
 
+        $scope.likePicture = function () {
+
+        }
+
     }]);

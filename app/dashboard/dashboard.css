@@ -3,6 +3,11 @@ img.timeline-image{
     height: 430px !important;
 }
 
+img.profile-image{
+    width: 45px !important;
+    height: 45px !important;;
+}
+
 .right-panel-background
 {
     background-color: #333333;

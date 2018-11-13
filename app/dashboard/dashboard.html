@@ -26,22 +26,40 @@
             <div class="col-sm-8 col-md-8 col-lg-8 mt-8">
                 <div class="card">
                     <div class="box ">
-                        <div class="icon">
-                            <div class=""><img class="timeline-image" ng-src="http://apgexmarketing.com/user123/{{publication.image.name}}"></div>
-                        </div>
+
                         <div class="card-block">
-                            <h4 class="card-title">{{publication.profile.name}}</h4>
+
+                            <div>
+
+                                <img class="profile-image" ng-src="http://apgexmarketing.com/user123/{{publication.profile.profileImage}}">
+                                <h4 class="card-title">{{publication.profile.name}}</h4>
+
+                            </div>
+
+
+
+
                             <div class="meta">
-                                <a href="#">Acerca de {{publication.profile.name}}: </a>
+                                <!--<a href="#">Acerca de {{publication.profile.name}}: </a>-->
                             </div>
                             <div class="card-text">
-                                {{publication.profile.description}}
+                                <!--{{publication.profile.description}}-->
                             </div>
                         </div>
                         <div class="card-footer">
-                            <span class="float-right">Subida: {{publication.image.creationDate | date:"MM/dd/yyyy 'a las' h:mma"}}</span>
+                            <span class="float-right">Subida: {{publication.image.creationDate | date:"dd/MM/yyyy 'a las' h:mma"}}</span>
                             <!--<span><i class=""></i>75 Friends</span>-->
                         </div>
+
+                        <div class="icon">
+                            <img class="timeline-image" ng-src="http://apgexmarketing.com/user123/{{publication.image.name}}">
+
+                        </div>
+
+                        <button type="button" class="btn btn-default pull-right" ng-click="likePicture()">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> Me Gusta
+                        </button>
+
                     </div>
                 </div>
 
