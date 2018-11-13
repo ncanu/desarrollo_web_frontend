@@ -1,11 +1,77 @@
-<ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-</ul>
+<link rel="stylesheet" href="../dashboard/dashboard.css">
 
-Dashboarddddddd
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" >PicShare</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a ng-click="getTimeLine()">Inicio</a></li>
+            <!--<li><a href="#">Inicio</a></li>-->
+            <!--<li><a href="#">Perfil</a></li>-->
+            <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+    </div>
+</nav>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<div class="col-md-8 " >
+
+    <div ng-repeat="publication in userPublicatons" style="margin-top: 10px" class="container-fluid bg-3 " >
+
+        <div class="row" >
+            <div class="col-md-2">
+
+            </div>
+
+            <div class="col-sm-8 col-md-8 col-lg-8 mt-8">
+                <div class="card">
+                    <div class="box ">
+                        <div class="icon">
+                            <div class=""><img class="timeline-image" ng-src="http://apgexmarketing.com/user123/{{publication.image.name}}"></div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">{{publication.profile.name}}</h4>
+                            <div class="meta">
+                                <a href="#">Acerca de {{publication.profile.name}}: </a>
+                            </div>
+                            <div class="card-text">
+                                {{publication.profile.description}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="float-right">Subida: {{publication.image.creationDate | date:"MM/dd/yyyy 'a las' h:mma"}}</span>
+                            <!--<span><i class=""></i>75 Friends</span>-->
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <!--<div class="col-md-8 blue-border left-panel-background" style="height: 500px">-->
+                <!--<h3 class="">{{publication.profile.name}}</h3><br>-->
+                <!--<p>{{publication.image.creationDate | date:"MM/dd/yyyy 'a las' h:mma"}}-->
+                <!--</p>-->
+
+                <!--&lt;!&ndash;http://apgexmarketing.com/user123/&ndash;&gt;-->
+                <!--<img ng-src="http://apgexmarketing.com/user123/{{publication.image.name}}" class="timeline-image " alt="Image">-->
+
+
+            <!--</div>-->
+
+
+        </div>
+
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-4 right-panel-background">
+
+</div>
+
 
