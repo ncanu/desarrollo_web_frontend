@@ -1,6 +1,13 @@
+.list-group-item {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
+}
+
 img.timeline-image{
-    width: 100% !important;
-    height: 430px !important;
+    width: 50% !important;
+    height: 290px !important;
 }
 
 img.profile-image{
@@ -11,9 +18,10 @@ img.profile-image{
 .right-panel-background
 {
     background-color: #333333;
+    height:702px;
     /*height: 100%;*/
-    padding-bottom: 100%;
-    margin-bottom: -100%;
+    /*padding-bottom: 100%;*/
+    /*margin-bottom: -100%;*/
 }
 
 .left-panel-background{
@@ -47,6 +55,7 @@ h5 {
 
 .card {
     font-size: 1em;
+    background: white;
     overflow: hidden;
     padding: 0;
     border: none;

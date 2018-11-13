@@ -14,10 +14,14 @@ angular.module('myApp.dashboard', ['ngRoute'])
        {
            $location.path( '/login' );
        }
+       else {
+           $http.defaults.headers.common.Authorization = "Bearer "+ localStorage.getItem("token");
+       }
 
-        $http.defaults.headers.common.Authorization = "Bearer "+ localStorage.getItem("token");
 
         $scope.userPublicatons = [];
+        $scope.userProfiles = [];
+
         $scope.getTimeLine = function () {
 
             $http.get("http://localhost:8080/api/images/images").then
@@ -38,7 +42,30 @@ angular.module('myApp.dashboard', ['ngRoute'])
 
         };
 
+
+        $scope.getProfiles = function () {
+
+            $http.get("http://localhost:8080/api/images/profiles").then
+            (
+                function(response)
+                {
+                    $scope.userProfiles = response.data.data;
+
+                },
+                function(error){
+
+                    $scope.errorsFounded = error.data.message;
+                    alert($scope.errorsFounded);
+
+                }
+            );
+
+
+        };
+
+
         $scope.getTimeLine();
+        $scope.getProfiles();
 
         $scope.likePicture = function () {
 
